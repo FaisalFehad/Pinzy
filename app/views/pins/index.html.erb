@@ -2,6 +2,8 @@
 
 <h1>Listing Pins</h1>
 
+<div class="container">
+
 <table>
   <thead>
     <tr>
@@ -18,10 +20,10 @@
         <td><%= image_tag pin.image.url(:medium) %></td>
         <td><%= pin.description %></td>
         <td><%= pin.picture %></td>
-        <td><%= link_to 'Show', pin %></td>
+        <td><%= link_to 'Show', pin, class: "btn btn-default" %></td>
 
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +31,6 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+</div>
+
+<%= link_to 'New Pin', new_pin_path, class: "btn btn-default btn-lg" %>

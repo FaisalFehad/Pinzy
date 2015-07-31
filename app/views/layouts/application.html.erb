@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= render 'home/header' %>
+
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -15,11 +17,9 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
-<%= render 'home/header' %>
-
-
 
 <%= yield %>
+
 
 </body>
 </html>
