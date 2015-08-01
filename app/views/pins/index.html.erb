@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Pins</h1>
-
-<% @pins.each do |pin| %>
-  <%= link_to image_tag(pin.image.url(:medium)), pin %><br/>
-  <%= pin.description %><br/>
-  <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %><br/>
-  <%= link_to 'Destroy', pin, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
-  <%= link_to 'New Pin', new_pin_path, class: "btn btn-default" %><br/>
+  <h1>Pinz</h1>
+  <div id="pins" class="transitions-enabled">
+  <% @pins.each do |pin| %>
+  <div class="box">
+<div class="panel panel-default">
+    <%= link_to image_tag(pin.image.url(:medium)), pin %><br/>
+    <%= pin.description %><br/>
+    <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %><br/>
+    <%= link_to 'Destroy', pin, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+    <%= link_to 'New Pin', new_pin_path, class: "btn btn-default" %><br/>
+  </div>
+</div>
 <% end %>
