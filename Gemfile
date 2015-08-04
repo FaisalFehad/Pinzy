@@ -12,6 +12,7 @@ gem 'paperclip', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'autoprefixer-rails'
 gem 'masonry-rails'
+gem 'devise-bootstrap-views'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -24,9 +25,10 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3' 
 end
- 
+
 group :production do
   gem 'pg', '~> 0.18.2'
-  gem 'rails_12factor', '0.0.2
+  gem 'rails_12factor', '0.0.2'
+
 end
 
