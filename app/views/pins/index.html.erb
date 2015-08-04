@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
-  <h1>Pinz</h1>
+  <h1>Your Pinz Wall</h1>
   <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
   <div class="box">
-<div class="panel panel-default">
+    <div class="panel panel-default">
     <%= link_to image_tag(pin.image.url(:medium)), pin %><br/>
-    <%= pin.description %><br/>
-    <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %><br/>
-    <%= link_to 'Destroy', pin, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
-    <%= link_to 'New Pin', new_pin_path, class: "btn btn-default" %><br/>
-  </div>
+      <%= pin.description %><br/>
+    </div>
+    <div class="panel-footer">
+      <span class="btn-group">
+        <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %><br/>
+        <%= link_to 'Destroy', pin, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+        <%= link_to 'New Pin', new_pin_path, class: "btn btn-default" %><br/>
+      </span>
+    </div>
 </div>
 <% end %>
