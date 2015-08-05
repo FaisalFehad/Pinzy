@@ -14,22 +14,28 @@ h1, h2, h3, h4, h5, h6 {
 .box {
 	margin: 10px;
 	width: 280px;
-	padding: 7px;
+	padding: 5px;
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	box-shadow: 0 1px 1px 0
 }
-.btn-group { 
-	display: inline;
+#edit-btn {
+	right: 90px;
+	top: 31px;
+}
+#unpin-btn{
+	right: 30px;
 }
 .box img{
-	width: 100%
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 .btn-lg{
 	position: fixed;
   right: 25px;
-  bottom: 20px;
+	top:700px;
   box-shadow: 5px 5px 5px #888888;
 }
 .btn-lg:hover{

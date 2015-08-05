@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
   <h1>Your Pinz Wall</h1>
   <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
@@ -9,8 +8,9 @@
     </div>
     <div class="panel-footer">
       <span class="btn-group">
-        <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-default" %><br/>
-        <%= link_to 'Destroy', pin, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+        <%= link_to 'Edit', edit_pin_path(pin),id:"edit-btn", class: "btn btn-sm btn-default glyphicon glyphicon-pencil" %><br/>
+
+        <%= link_to 'Unpin', pin, id:"unpin-btn", class: "btn btn-sm btn-default glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
       </span>
     </div>
 </div>
