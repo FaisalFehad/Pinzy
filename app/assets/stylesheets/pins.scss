@@ -4,7 +4,7 @@
 body {
 	background: #E9E9E9;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
 	font-weight: 200;
 	text-indent: 20px;
 }
@@ -48,4 +48,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 60%;
   border:3px solid #8AC007;
   padding: 10px;
+}
+.panel-body {
+	padding: 35px;
+	h1 {
+	margin: 0 0 10px 0;
+	}
+.description {
+	color: #868686;
+	line-height: 1.75;
+	margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+	.usedr {
+		padding-top: 8px;
+	}
 }
