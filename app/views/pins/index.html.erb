@@ -9,11 +9,14 @@
     <div class="panel-footer">
       <h6 id="by"> By:
       <%= pin.user.email %> </h6>
+
+      <%= link_to "Like", like_pin_path(pin), method: :put,
+    id:"like-btn", class:"btn btn-xs btn-danger glyphicon glyphicon-heart" %>
     <% if pin.user == current_user %>
       <span class="btn-group">
-        <%= link_to 'Edit', edit_pin_path(pin),id:"edit-btn", class: "btn btn-sm btn-default glyphicon glyphicon-pencil" %><br/>
+        <%= link_to 'Edit', edit_pin_path(pin),id:"edit-btn", class: "btn btn-xs btn-default glyphicon glyphicon-pencil" %><br/>
 
-        <%= link_to 'Unpin', pin, id:"unpin-btn", class: "btn btn-sm btn-default glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+        <%= link_to 'Unpin', pin, id:"unpin-btn", class: "btn btn-xs btn-default glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 
       </span>
     </div>

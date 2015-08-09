@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'autoprefixer-rails'
 gem 'masonry-rails'
 gem 'devise-bootstrap-views'
+gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -23,7 +24,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'sqlite3' 
+  gem 'sqlite3'
 end
 
 group :production do
@@ -31,4 +32,3 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 
 end
-
