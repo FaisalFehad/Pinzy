@@ -10,8 +10,12 @@
       <h6 id="by"> By:
       <%= pin.user.email %> </h6>
 
-      <%= link_to "Like", like_pin_path(pin), method: :put,
-    id:"like-btn", class:"btn btn-xs btn-danger glyphicon glyphicon-heart" %>
+      <div class="col-md-6">
+        <div class="btn-group pull-right">
+          <%= link_to like_pin_path(pin), method: :put, id:"like-btn", class: "btn btn-xs btn-danger" do %>
+          <span class="glyphicon glyphicon-heart"></span>
+          <%= pin.get_upvotes.size %>
+        <%end %>
     <% if pin.user == current_user %>
       <span class="btn-group">
         <%= link_to 'Edit', edit_pin_path(pin),id:"edit-btn", class: "btn btn-xs btn-default glyphicon glyphicon-pencil" %><br/>

@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /pins
