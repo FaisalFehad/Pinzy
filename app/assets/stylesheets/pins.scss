@@ -8,6 +8,12 @@ h1, h2, h3, h5, h6 {
 	font-weight: 200;
 	text-indent: 20px;
 }
+#wrapper {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+}
 .box {
 	margin: 10px;
 	width: 280px;
@@ -16,14 +22,12 @@ h1, h2, h3, h5, h6 {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	border-radius: 10px;
-	box-shadow: 0 1px 1px 0
+	box-shadow: 0 1px 1px 0;
 }
 #by {
 	color:gray;
 }
-#like-btn{
- right: -80px;
- top: -7px;
+#likec-btn {
 }
 #edit-btn {
 	right: 160px;
@@ -52,7 +56,7 @@ h1, h2, h3, h5, h6 {
 	box-shadow: 0px 1px 1px #888888;
 }
 .edit_image{
-	amargin: auto;
+	margin: auto;
   width: 60%;
   border:3px solid #8AC007;
   padding: 10px;
@@ -65,7 +69,6 @@ h1, h2, h3, h5, h6 {
 .description {
 	color: #868686;
 	line-height: 1.75;
-	margin: 0;
 		}
 	}
 	.panel-footer {
