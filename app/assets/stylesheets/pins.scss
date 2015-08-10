@@ -8,9 +8,6 @@ h1, h2, h3, h5, h6 {
 	font-weight: 200;
 	text-indent: 20px;
 }
-#pins {
-	margin: 0 auto;
-}
 .box {
 	margin: 10px;
 	width: 280px;
@@ -23,7 +20,6 @@ h1, h2, h3, h5, h6 {
 }
 #by {
 	color:gray;
-
 }
 #like-btn{
  right: -80px;
@@ -36,6 +32,9 @@ h1, h2, h3, h5, h6 {
 #unpin-btn{
 	right: 110px;
 	top: -32px;
+}
+#like-btn-show{
+	right:1px;
 }
 .box img{
 	max-width: 100%;

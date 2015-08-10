@@ -12,8 +12,12 @@
   	<h4> Submitted by: </h4>
   	<%= @pin.user.email %> <br/>
 
+    <div  class="btn-group">
+      <%= link_to like_pin_path(@pin), method: :put, id:"like-btn-show", class: "btn btn-default btn-danger" do %>
+      <span class="glyphicon glyphicon-heart"></span>
+      <%= @pin.get_upvotes.size %>
+    <%end %>
 	<%= link_to 'Edit', edit_pin_path(@pin),class: "btn btn-default" %>
 	<%= link_to 'Back', pins_path, class: "btn btn-default" %>
 </div>
 </div>
-
