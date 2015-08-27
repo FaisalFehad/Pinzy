@@ -16,16 +16,13 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
-      <li><%= link_to 'About', static_about_path %> </li>
       <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-    <% else %>
-      <li><%= link_to 'Home', pins_path %> </li>
       <li><%= link_to 'About', static_about_path %> </li>
+    <% else %>
       <li><%= link_to 'Sign In', new_user_session_path %> </li>
       <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
+      <li><%= link_to 'About', static_about_path %> </li>
     <% end %>
     </ul>
   </div>
 </nav>
-
-
