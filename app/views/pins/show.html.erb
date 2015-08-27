@@ -20,10 +20,26 @@
   	<%= link_to 'Back', pins_path, class: "btn btn-default" %>
     <% end %>
   <% end %>
-</div>
-</div>
-</div>
-</div>
 
+  <hr />
+  <div class=“container”>
+    <h3> Comments </h3>
+    <br />
+    <br />
+      <%= @pin.comments.each do |comment| %>
+      <P><%= comment.content %></p>
+        <hr />
+      <%end%>
+      <hr />
 
+    <%= form_for [@pin, @pin.comments.build] do |f| %>
+      <%= f.text_area :content, class:"form-control", rows:"5" %>
+      <%= f.submit "Save", class: "btn btn-default" %>
+      <%= link_to "Back", :back, class: "btn btn-default" %>
+    <%end%>
+  </div>
 
+</div>
+</div>
+</div>
+</div>

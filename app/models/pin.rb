@@ -1,6 +1,7 @@
 class Pin < ActiveRecord::Base
-  acts_as_votable
   belongs_to :user
+
+  acts_as_votable
   has_many :comments
 
   has_attached_file :image, :styles => { medium: "300x300>", thumb: "100x100>" }
