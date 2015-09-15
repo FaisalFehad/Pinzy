@@ -3,42 +3,43 @@
     <div class="panel panel-default">
       <div class="panel-heading text-center"><%= image_tag @pin.image.url(:medium) %>
 	 </div>
-
+	 <div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class=“container ”>
+      <br/>
+      	 <small> By: <b> <%= @pin.user.email %> </b> <%= time_ago_in_words(@pin.created_at) %> ago. </samll>
+        <% if @pin.user == current_user %>
+          <div  class="btn-group pull-right">
+            <%= link_to 'Back', pins_path, class: "btn btn-default" %>
+            <%= link_to like_pin_path(@pin), method: :put, id:"like-btn-show", class: "btn btn-default btn-danger" do %>
+          <span class="glyphicon glyphicon-heart"></span>
+            <%= @pin.get_upvotes.size %>
+            <%= link_to 'Edit', edit_pin_path(@pin),class: "btn btn-default" %>
+        <% end %>
+      <% end %>
+    </div>
+  <br />
 	 <div class="panel-body">
+	   <h4> <%= :description %></h4>
+  	 <p>  <%= @pin.description %></p>
+  <br/>
+  	
+<hr/>
 
-  	<%= @pin.description %><br/>
-  	<br/>
-<div class=“container”>
-  	<h4> Submitted by: </h4>
-  	<%= @pin.user.email %> <br/>
-    <% if @pin.user == current_user %>
-      <%= link_to 'Edit', edit_pin_path(@pin),class: "btn btn-default" %>
-      <div  class="btn-group">
-        <%= link_to like_pin_path(@pin), method: :put, id:"like-btn-show", class: "btn btn-default btn-danger" do %>
-        <span class="glyphicon glyphicon-heart"></span>
-        <%= @pin.get_upvotes.size %>
-  	<%= link_to 'Back', pins_path, class: "btn btn-default" %>
-    <% end %>
-  <% end %>
-
-  <hr />
   <div class=“container”>
     <h3> Comments </h3>
     <br />
-    <br />
-      <%= @pin.comments.each do |comment| %>
+      <% @pin.comments.each do |comment| %>
       <P><%= comment.content %></p>
+      <small><%= time_ago_in_words(comment.created_at)%> ago</samll>
         <hr />
       <%end%>
-      <hr />
 
     <%= form_for [@pin, @pin.comments.build] do |f| %>
-      <%= f.text_area :content, class:"form-control", rows:"5" %>
-      <%= f.submit "Save", class: "btn btn-default" %>
-      <%= link_to "Back", :back, class: "btn btn-default" %>
+      <%= f.text_area :content,  class:"form-control", rows:"5" %>
+      <%= f.submit "Post",       class: "btn btn-default pull-right" %>
     <%end%>
   </div>
-
 </div>
 </div>
 </div>
