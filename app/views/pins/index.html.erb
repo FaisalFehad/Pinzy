@@ -19,7 +19,7 @@
               <%= pin.get_upvotes.size %>
             <%end %>
             <% if pin.user == current_user %>
-              <span class="btn-group">
+              <span class="btn-group ">
                 <%= link_to 'Edit', edit_pin_path(pin),id:"edit-btn", class: "btn btn-xs btn-default glyphicon glyphicon-pencil" %><br/>
                 <%= link_to 'Unpin', pin, id:"unpin-btn", class: "btn btn-xs btn-default glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
             <% end %>
