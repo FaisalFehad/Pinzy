@@ -1,4 +1,6 @@
-    
+<div class="panel panel-default">
+  <div class="panel-heading">
+
 <%= form_for@pin, html: { multipart: true } do |f| %>
   <% if @pin.errors.any? %>
     <div id="error_explanation">
@@ -20,10 +22,11 @@
     <%= f.label :description %><br>
     <%= f.text_area :description,class: "form-control" %>
   </div>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
 </form>
-
 <% end %>
+  </div>
+</div>
